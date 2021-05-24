@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token % }
+        <div>
+            <fieldset>
+                <legent>Регистрация</legent>
+                <table>
+                    <tr>
+                        <td><input type="text" name="name" placeholder="Имя"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="second_name" placeholder="Фамилия"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="age" placeholder="Возраст"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" name="email" placeholder="Электронная Почта"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <input type="submit" value="Сохранить" >
+                <a href="{% url 'home' %}"><input type="button" value="Назад"></a>
+            </fieldset>
+        </div>
+    </form>
+    {% if people.count > 0 %}
+    <div>
+        <h2>Список пользователей</h2>
+    <table>
+         <tr>
+             <th>Имя</th>
+             <th>Фамилия</th>
+             <th>Возраст</th>
+             <th>Элекронная Почта</th>
+         </tr>
+         {% for person in people %}
+         <tr>
+             <td>{{ person.name }}</td>
+             <td>{{ person.second_name }}</td>
+             <td>{{ person.age }}</td>
+             <td>{{ person.email}}</td>
+         </tr>
+         {% endfor %}
+    </table>
+    </div>
+    {% endif %}
+</body>
+</html>

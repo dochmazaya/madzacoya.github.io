@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>all photo</title>
+  <style>
+   .thumb img  {
+    padding: 15px; /* Расстояние от картинки до рамки */
+    background: #FF9640; /* Цвет фона */
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+   }
+  </style>
+
+ </head>
+    <body bgcolor="3b1222">
+	<h1>
+
+        <a href="{% url 'index'%}" > <font color="c9c9f5" face="MV Boli">DochMazaya's photos</font> </a>
+	</h1>
+    <hr color="c9c9f5">
+
+
+
+
+
+  <p class="thumb">
+<a href="{% url 'outside'%}"><img align="center" src="https://i.pinimg.com/236x/96/26/e1/9626e18b628e543911c6a0c7ed0713bd.jpg" width="400" title="outside"></a>
+<a href="{% url 'inside'%}"><img align="right" src="https://i.pinimg.com/236x/05/46/65/054665156b19f13686e91c4b4e965e28.jpg" width="380" title="inside"></a>
+  </p>
+
+    <p align="left">
+<font color="c9c9f5" face="Palatino Linotype">outside</font>
+    </p>
+
+    <p align="right">
+ <font color="c9c9f5" face="Palatino Linotype">intside</font>
+    </p>

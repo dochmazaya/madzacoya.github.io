@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Регистрация</title>
+  </head>
+    <body>
+      <h2>Вконтакте</h2>
+      <hr>
+        <div>
+            <fieldset>
+                <legent>Регистрация</legent>
+                <table>
+                    <tr>
+                        <td><input type="text" name="name" placeholder="Имя" required></td>
+                        <td><input type="text" name="name" placeholder="Фамилия" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" placeholder="Введите адрес электронной почты"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="tel" placeholder="Введите номер телефона"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" placeholder="Новый пароль"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" placeholder="Повторите пароль"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="male" required>
+                                <option value="None" name="male">Пол</option>
+                                <option value="Мужской" name="male">Мужской</option>
+                                <option value="Женский" name="male">Женский</option>
+                            </select>
+                        </td>
+                        <td>
+                    </tr>
+                    <tr>
+                        <td><p></p>Нажимая <b>"Регистрация"</b> вы соглашаетесь с  нашими</td>
+                    </tr>
+                    <tr>
+                        <td><b>условиями использлваниями</b> и с тем, что вы прочитали </td>
+                    </tr>
+                    <tr>
+                        <td>и понимаете вашу <b>политику испоользования данных,<b> </td>
+                    </tr>
+                    <tr>
+                        <td>включая использования файлов cookie</td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <input type="submit" value="Регистрация">
+                <input type="reset" value="Сбросить">
+                <a href="{% url 'home'%}"><input type="button" value="Назад"></a>
+            </fieldset>
+        </div>
+</body>
+</html>
